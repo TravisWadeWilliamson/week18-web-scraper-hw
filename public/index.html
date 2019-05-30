@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Scraping With Mongoose</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style>
     body {
-      background-color: rgb(14, 12, 12);
+      background-color: rgb(38, 38, 38);
       color: #fff;
     }
 
@@ -33,7 +35,8 @@
     input {
       display: block;
       width: 100%;
-      background-color: rgb(14, 12, 12);
+      background-color: rgb(38, 38, 38);
+      color: rgba(244, 244, 244, 1)
     }
 
     input {
@@ -50,8 +53,12 @@
 
 <body>
   <div id="wrapper">
+    <div>
+      <a href="/scrape" class="btn btn-secondary mr-2">Scrape Articles</a>
+      <a href="/clear" class="btn btn-danger ml-2">Clear Articles</a>
+    </div>
     <h1>Business Headlines</h1>
-    <div id="articles"></div>
+    <ul id="articles" class="list-group"></ul>
     <div id="notes"></div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

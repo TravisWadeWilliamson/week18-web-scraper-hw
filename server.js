@@ -56,8 +56,8 @@ app.get("/scrape", function (req, res) {
         });
     });
 
-    // Send a message to the client
-    res.send("Scrape Complete");
+    // Redirect to home
+    res.redirect('/');
   });
 });
 
@@ -109,6 +109,11 @@ app.post("/articles/:id", function (req, res) {
       // If an error occurred, send it to the client
       res.json(err);
     });
+});
+
+app.get('/clear', (req,res) => {
+  db.Article.deleteMany().then(() => res.redirect('/'));
+  
 });
 
 // Start the server

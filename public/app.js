@@ -3,7 +3,7 @@ $.getJSON("/articles", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
     // Display the information on the page
-    $("#articles").append("<h3 data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</h3>");
+    $("#articles").append(`<h3 data-id="${data[i]._id}"><li style="color:red"> ${data[i].title}</li><i style="font-size:0.7em">${data[i].link}</i> </h3>`);
   }
 });
 
